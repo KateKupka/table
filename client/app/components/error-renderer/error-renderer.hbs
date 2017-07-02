@@ -1,0 +1,17 @@
+<div class='errors'>
+  <p class='errors__sum'>Errors total: {{errors.count}}</p>
+  <ul class='errors__list'>
+    {{#each errors.types}}
+      <li>
+        <p>Error type: {{@key}} ({{this.count}})</p>
+        {{#if this.example}}
+          <ul>
+            {{#each this.example}}
+              <li> {{this}} </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

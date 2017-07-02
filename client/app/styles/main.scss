@@ -1,0 +1,47 @@
+@import 'mixins';
+@import 'input-section';
+@import 'table-section';
+@import 'errors-section';
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .link {
+    @include link();
+  }
+
+  section {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  .wrapper {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .link{
+    display: block;
+    &:after{
+      display: none;
+    }
+  }
+}

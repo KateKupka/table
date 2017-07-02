@@ -1,0 +1,64 @@
+.table-section {
+
+  &__count {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  &__table-container{
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  &__table {
+    @include regular-copy();
+    font-size: 14px;
+    background: #ececec;
+
+    .title{
+      text-align: center;
+      text-transform: uppercase;
+      padding: 10px 0;
+    }
+
+    tr{
+      td{
+        white-space: nowrap;
+        text-align: left;
+        table {
+          vertical-align: top;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .table-section {
+    &__table{
+      width: 100%;
+      background-color: transparent;
+      tr{
+        td{
+          table{
+            display: block;
+            background-color: #ececec;
+            margin-bottom: 20px;
+            tbody{
+              display: block;
+              tr{
+                display: block;
+                td{
+                  display: block;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<ul class="table-section__count">
+  <li>Comas: {{comas}}</li>
+  <li>Dots: {{dots}}</li>
+</ul>
+
+<div class="table-section__table-container">
+  <table class="table-section__table">
+      <tbody>
+        <tr>
+          <td>
+            {{#each letters}}
+            <table cellpading="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td class="title">{{@key}}</td>
+                </tr>
+                {{#each this}}
+                <tr>
+                  <td>{{@key}} ({{this}}) </td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+            {{/each}}
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
