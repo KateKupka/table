@@ -4,7 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 export default {
   devtool: 'source-map',
-  entry: './client/app/app.js',
+  entry: {
+    index: [
+      'babel-polyfill',
+      './client/app/app.js',
+    ]
+  },
   output: {
     path: path.resolve(process.cwd(), 'dist'),
     filename: "app.bundle.js"
